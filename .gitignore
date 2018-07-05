@@ -1,2 +1,4 @@
 node_modules
 dist
+frontend.iml
+yarn-error.log
