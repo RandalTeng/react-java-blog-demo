@@ -4,16 +4,9 @@ import PropTypes from 'prop-types';
 class LiButton extends React.Component {
     constructor(props) {
         super(props);
-        // 可变属性
 
-        // 不可变属性
-
-        // 鼠标事件
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    componentDidUpdate() {
         this.link = this.props.link;
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(e) {

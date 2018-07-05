@@ -3,12 +3,19 @@ import Container from '../components/Container';
 import HeaderSearch from './HeaderSearch';
 import MoreNav from './MoreNav';
 import MenuNav from './MenuNav';
-import FollowList from './FollowList';
+import UlList from '../components/UlList';
 
 class Header extends React.Component {
     constructor(props) {
         super(props);
 
+        this.followList = [
+            {link: '#', aClass: ''},
+            {link: '#', aClass: 'pin'},
+            {link: '#', aClass: 'in'},
+            {link: '#', aClass: 'be'},
+            {link: '#', aClass: 'vimeo'},
+        ];
     }
 
     render() {
@@ -31,7 +38,7 @@ class Header extends React.Component {
                     <div className="nav navbar-nav navbar-right social-icons wow fadeInRight animated animated"
                          data-wow-delay=".5s"
                          style={{visibility: "visible", animationDelay: "0.5s", animationName: "fadeInRight",}}>
-                        <FollowList/>
+                        <UlList list={this.followList}/>
                     </div>
                 </Container>
             </div>

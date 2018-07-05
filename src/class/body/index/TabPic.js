@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from "../../components/Container";
 import TabPicContent from "./TabPicContent";
-import PicTitle from "./PicTitle";
+import UlList from "../../components/UlList";
 
 class TabPic extends React.Component {
 
@@ -80,29 +80,16 @@ class TabPic extends React.Component {
     }
 
     handleClick(e, activeLink) {
-        console.log('click a link');
-        console.dir(this);
+        console.log('click a link ' + activeLink);
         let picTitles = this.state.picTitles, tabList = this.state.tabList;
 
-        let newPicTitle = [];
+        picTitles.forEach((pic) => pic.liClass = pic.link === activeLink ? 'active' : '');
+        tabList.forEach((tab) => tab.class = "#" + tab.id === activeLink ? 'tab-pane fade active in' : 'tab-pane fade');
 
-        picTitles.map(function (pic) {
-            pic.liClass = pic.link === activeLink ? 'active' : '';
-            newPicTitle.push(Object.assign({}, pic));
-        });
-
-
-        tabList.map((tab) => {
-            tab.class = "#" + tab.id === activeLink ? 'tab-pane fade active in' : 'tab-pane fade';
-        });
         this.setState({
-            picTitles: newPicTitle,
+            picTitles: picTitles,
             tabList: tabList,
         });
-    }
-
-    componentDidUpdate() {
-
     }
 
     render() {
@@ -112,15 +99,13 @@ class TabPic extends React.Component {
             <div className="services w3l wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
                 <Container>
                     <div className="grid_3 grid_5">
-                        <PicTitle picTitles={this.state.picTitles} handleClick={this.handleClick}/>
+                        <UlList ulClass="nav nav-tabs" list={this.state.picTitles} handleClick={this.handleClick}/>
                         <TabPicContent tabList={this.state.tabList}/>
                     </div>
                 </Container>
             </div>
         );
     }
-
-
 }
 
 export default TabPic;
