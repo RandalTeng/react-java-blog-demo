@@ -7,10 +7,13 @@ class LiButton extends React.Component {
         // 可变属性
 
         // 不可变属性
-        this.link = props.link;
 
         // 鼠标事件
         this.handleClick = this.handleClick.bind(this);
+    }
+
+    componentDidUpdate() {
+        this.link = this.props.link;
     }
 
     handleClick(e) {

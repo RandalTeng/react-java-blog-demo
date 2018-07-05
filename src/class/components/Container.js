@@ -3,15 +3,17 @@ import React from 'react';
 class Container extends React.Component {
     constructor(props) {
         super(props);
-
-        this.children = props.children;
     }
 
+    componentWillMount() {
+        this.children = this.props.children;
+    }
 
     render() {
+        const {children} = this.props;
         return (
             <div className={'container'}>
-                {this.children}
+                {children}
             </div>
         );
     }

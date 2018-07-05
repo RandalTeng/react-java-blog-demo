@@ -81,6 +81,7 @@ class TabPic extends React.Component {
 
     handleClick(e, activeLink) {
         console.log('click a link');
+        console.dir(this);
         let picTitles = this.state.picTitles, tabList = this.state.tabList;
 
         let newPicTitle = [];
@@ -106,6 +107,7 @@ class TabPic extends React.Component {
 
     render() {
         console.log("TabPic render.");
+        console.dir(this.state);
         return (
             <div className="services w3l wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
                 <Container>

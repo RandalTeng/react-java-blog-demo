@@ -15,6 +15,8 @@ class PicTitle extends React.Component {
 
 
     render() {
+        console.log('PicTitle render.');
+        console.dir(this.props);
         return (
             <ul className="nav nav-tabs" role="tablist">
                 {this.props.picTitles.map((title, index) => (

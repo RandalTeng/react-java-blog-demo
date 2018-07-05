@@ -5,7 +5,6 @@ import LiButton from '../components/LiButton';
 class FollowList extends React.Component{
     constructor(props) {
         super(props);
-        this.ulClass = props.ulClass;
 
         this.followList = [
             {link: '#', aClass: ''},
@@ -14,6 +13,10 @@ class FollowList extends React.Component{
             {link: '#', aClass: 'be'},
             {link: '#', aClass: 'vimeo'},
         ];
+    }
+
+    componentDidMount() {
+        this.ulClass = this.props.ulClass;
     }
 
     render() {
