@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import HeaderBottom from "../banner/HeaderBottom";
-import BannerContent from "../banner/BannerContent";
-import TabPic from "../components/TabPic";
+import HeaderBottom from "../body/index/HeaderBottom";
+import BannerContent from "../body/index/BannerContent";
+import TabPic from "../body/index/TabPic";
 
 class Index extends React.Component {
 
@@ -12,6 +12,7 @@ class Index extends React.Component {
                 <HeaderBottom/>
                 <BannerContent/>
                 <TabPic/>
+
             </div>
         );
     }

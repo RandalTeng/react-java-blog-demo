@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from "./Container";
+import Container from "../../components/Container";
 import TabPicContent from "./TabPicContent";
 import PicTitle from "./PicTitle";
 

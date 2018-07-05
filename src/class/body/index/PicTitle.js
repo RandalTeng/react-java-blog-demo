@@ -1,5 +1,5 @@
 import React from 'react';
-import LiButton from "./LiButton";
+import LiButton from "../../components/LiButton";
 //import emptyShell from "./WarpComponent";
 
 class PicTitle extends React.Component {
