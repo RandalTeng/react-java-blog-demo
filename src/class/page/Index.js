@@ -3,6 +3,7 @@ import {Route} from 'react-router-dom';
 import HeaderBottom from "../body/index/HeaderBottom";
 import BannerContent from "../body/index/BannerContent";
 import TabPic from "../body/index/TabPic";
+import Technology from "../body/index/Technology";
 
 class Index extends React.Component {
 
@@ -12,7 +13,7 @@ class Index extends React.Component {
                 <HeaderBottom/>
                 <BannerContent/>
                 <TabPic/>
-
+                <Technology/>
             </div>
         );
     }
