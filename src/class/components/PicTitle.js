@@ -1,10 +1,16 @@
 import React from 'react';
 import LiButton from "./LiButton";
+//import emptyShell from "./WarpComponent";
 
 class PicTitle extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {...this.props};
+    }
 
+    componentWillReceiveProps(nextProps) {
+       console.log('get new-props');
+       console.dir(nextProps);
     }
 
 
@@ -15,7 +21,7 @@ class PicTitle extends React.Component {
                     <LiButton
                         link={title.link}
                         liClass={title.liClass}
-                        onClick={this.props.handelClick}
+                        onClick={this.props.handleClick}
                         linkName={title.linkName}
                         key={index} />
                 ))}
@@ -23,5 +29,7 @@ class PicTitle extends React.Component {
         );
     }
 }
+
+//PicTitle = emptyShell(PicTitle);
 
 export default PicTitle;

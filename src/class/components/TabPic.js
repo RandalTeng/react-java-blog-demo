@@ -76,20 +76,26 @@ class TabPic extends React.Component {
         };
 
         console.log('new constructor.');
-        this.handelClick = this.handelClick.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
-    handelClick(e, activeLink) {
+    handleClick(e, activeLink) {
         console.log('click a link');
         let picTitles = this.state.picTitles, tabList = this.state.tabList;
+
+        let newPicTitle = [];
+
         picTitles.map(function (pic) {
             pic.liClass = pic.link === activeLink ? 'active' : '';
+            newPicTitle.push(Object.assign({}, pic));
         });
+
+
         tabList.map((tab) => {
             tab.class = "#" + tab.id === activeLink ? 'tab-pane fade active in' : 'tab-pane fade';
         });
         this.setState({
-            picTitles: picTitles,
+            picTitles: newPicTitle,
             tabList: tabList,
         });
     }
@@ -99,13 +105,12 @@ class TabPic extends React.Component {
     }
 
     render() {
-        console.log('TabPic updated.');
-        console.dir(this.state);
+        console.log("TabPic render.");
         return (
             <div className="services w3l wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
                 <Container>
                     <div className="grid_3 grid_5">
-                        <PicTitle picTitles={this.state.picTitles} handleClick={this.handelClick}/>
+                        <PicTitle picTitles={this.state.picTitles} handleClick={this.handleClick}/>
                         <TabPicContent tabList={this.state.tabList}/>
                     </div>
                 </Container>
