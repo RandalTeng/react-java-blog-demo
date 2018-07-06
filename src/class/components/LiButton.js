@@ -30,7 +30,10 @@ class LiButton extends React.Component {
 LiButton.propTypes = {
     liClass: PropTypes.string,
     aClass: PropTypes.string,
-    linkName: PropTypes.string,
+    linkName: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.element
+    ]),
     link: PropTypes.string,
     onClick: PropTypes.func,
 };

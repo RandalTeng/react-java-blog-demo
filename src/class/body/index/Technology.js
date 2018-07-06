@@ -1,28 +1,93 @@
 import React from 'react';
 import Container from "../../components/Container";
-import FirstNews from "./FirstNews";
-import SecondNews from "./SecondNews";
+import Left from "./left/Left";
+import Right from "./right/Right";
 
 class Technology extends React.Component {
     constructor(props) {
         super(props);
 
+        this.secondArticles = [
+            {
+                imgSrc: '/assets/images/m4.jpg',
+                artLink: '/singlepage.html',
+                artTitle: 'Lorem Ipsum is simply',
+                artAuthor: 'ADAM ROSE',
+                artTime: 'JULY 10 2016',
+                artDesc: 'Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et dolore magna ' +
+                'aliqua exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                followList: [
+                    {liClass: 'hvr-rectangle-out', aClass: 'fb', link: '#'},
+                    {liClass: 'hvr-rectangle-out', aClass: 'pin', link: '#'},
+                ],
+            },
+            {
+                imgSrc: '/assets/images/m5.jpg',
+                artLink: '/singlepage.html',
+                artTitle: 'Lorem Ipsum is simply',
+                artAuthor: 'ADAM ROSE',
+                artTime: 'JULY 10 2016',
+                artDesc: 'Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et dolore magna ' +
+                'aliqua exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+                followList: [
+                    {liClass: 'hvr-rectangle-out', aClass: 'twit', link: '#'},
+                    {liClass: 'hvr-rectangle-out', aClass: 'drib', link: '#'},
+                ],
+            },
+        ];
+        this.otherArticles = [
+            {
+                imgSrc: '/assets/images/f1.jpg',
+                artLink: '/singlepage.html',
+                artTitle: 'Lorem Ipsum is simply',
+                artAuthor: 'ADAM ROSE',
+                artTime: 'JULY 10 2016',
+                artDesc: 'Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et dolore magna aliqua' +
+                'exercitation ullamco laboris.',
+                followList: [
+                    {liClass: 'hvr-rectangle-out', aClass: 'twit', link: '#'},
+                    {liClass: 'hvr-rectangle-out', aClass: 'pin', link: '#'},
+                ]
+            },
+            {
+                imgSrc: '/assets/images/f2.jpg',
+                artLink: '/singlepage.html',
+                artTitle: 'Lorem Ipsum is simply',
+                artAuthor: 'ADAM ROSE',
+                artTime: 'JULY 10 2016',
+                artDesc: 'Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et dolore magna aliqua' +
+                'exercitation ullamco laboris.',
+                followList: [
+                    {liClass: 'hvr-rectangle-out', aClass: 'goog', link: '#'},
+                    {liClass: 'hvr-rectangle-out', aClass: 'fb', link: '#'},
+                ]
+            },
+            {
+                imgSrc: '/assets/images/f3.jpg',
+                artLink: '/singlepage.html',
+                artTitle: 'Lorem Ipsum is simply',
+                artAuthor: 'ADAM ROSE',
+                artTime: 'JULY 10 2016',
+                artDesc: 'Ut enim ad minim veniam, quis nostrud eiusmod tempor incididunt ut labore et dolore magna aliqua' +
+                'exercitation ullamco laboris.',
+                followList: [
+                    {liClass: 'hvr-rectangle-out', aClass: 'drib', link: '#'},
+                    {liClass: 'hvr-rectangle-out', aClass: 'goog', link: '#'},
+                ]
+            },
+        ];
     }
 
     render() {
         return (
             <div className="technology">
                 <Container>
-                    <div className="col-md-9 technology-left">
-                        <div className="tech-no">
-                            <FirstNews/>
-                            <SecondNews/>
-                        </div>
-                    </div>
-                    <div className="col-md-3 technology-right">
+                    <Left/>
+                    <Right/>
+                    {/*<div className="col-md-3 technology-right">
                         <div className="blo-top1">
                             <div className="tech-btm">
-                                {/*<div className="search-1 wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
+                                <div className="search-1 wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
                                     <form action="#" method="post">
                                         <label>
                                             <input type="search" name="Search" value="Search" onFocus="this.value = '';"
@@ -30,7 +95,7 @@ class Technology extends React.Component {
                                         </label>
                                         <input type="submit" value=" "/>
                                     </form>
-                                </div>*/}
+                                </div>
                                 <h4>Popular Posts </h4>
                                 <div className="blog-grids wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
                                     <div className="blog-grid-left">
@@ -88,6 +153,8 @@ class Technology extends React.Component {
                                     </div>
                                     <div className="clearfix"/>
                                 </div>
+
+
                                 <div className="insta wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
                                     <h4>Instagram</h4>
                                     <ul>
@@ -143,7 +210,7 @@ class Technology extends React.Component {
                                     scribentur, at pro</p>
                             </div>
                         </div>
-                    </div>
+                    </div>*/}
                 </Container>
             </div>
         );

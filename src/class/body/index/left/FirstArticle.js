@@ -1,7 +1,7 @@
 import React from 'react';
-import UlList from "../../components/UlList";
+import UlList from "../../../components/UlList";
 
-class FirstNews extends React.Component {
+class FirstArticle extends React.Component {
     constructor(props) {
         super(props);
 
@@ -48,4 +48,4 @@ class FirstNews extends React.Component {
 
 }
 
-export default FirstNews;
+export default FirstArticle;

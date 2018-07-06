@@ -10,6 +10,6 @@ import Router from './Router';
 
 ReactDOM.render(
     <Router/>,
-    document.getElementById('container')
+    document.querySelector('#container')
 );
 
