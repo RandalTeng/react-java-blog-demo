@@ -8,14 +8,14 @@ class MenuNav extends React.Component{
 
         this.state = {
             menuList: [
-                {link: 'index.html', linkName: 'Home', liClass: 'active act'},
-                {link: 'about.html', linkName: 'About',},
-                {link: 'features.html', linkName: 'Features',},
-                {link: 'travel.html', linkName: 'Travel',},
-                {link: 'fashion.html', linkName: 'Fashion',},
-                {link: 'music.html', linkName: 'Music',},
-                {link: 'codes.html', linkName: 'Codes',},
-                {link: 'contact.html', linkName: 'Contact',},
+                {link: '/index.html', linkName: 'Home', liClass: 'active act'},
+                {link: '/about.html', linkName: 'About',},
+                {link: '/features.html', linkName: 'Features',},
+                {link: '/travel.html', linkName: 'Travel',},
+                {link: '/fashion.html', linkName: 'Fashion',},
+                {link: '/music.html', linkName: 'Music',},
+                {link: '/codes.html', linkName: 'Codes',},
+                {link: '/contact.html', linkName: 'Contact',},
             ],
         };
 
