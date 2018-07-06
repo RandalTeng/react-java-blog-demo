@@ -1,19 +1,24 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
-import HeaderBottom from "../header/HeaderBottom";
-import BannerContent from "../header/BannerContent";
+import BannerContent from "../body/index/BannerContent";
 import TabPic from "../body/index/TabPic";
-import Technology from "../body/index/Technology";
+import IndexContainer from "../body/index/IndexContainer";
 
 class Index extends React.Component {
+    constructor(props) {
+        super(props);
+
+    }
+
+    componentDidMount() {
+        document.title = 'Home';
+    }
 
     render() {
         return (
             <div>
-                <HeaderBottom/>
                 <BannerContent/>
                 <TabPic/>
-                <Technology/>
+                <IndexContainer/>
             </div>
         );
     }

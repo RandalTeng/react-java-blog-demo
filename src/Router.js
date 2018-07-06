@@ -1,17 +1,11 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch, HashRouter} from 'react-router-dom';
-import Model from "./Model";
+import {renderRoutes} from 'react-router-config';
+import Header from "./class/header/Header";
+import HeaderBottom from "./class/header/HeaderBottom";
+import Footer from './class/footer/Footer';
 import Index from "./class/page/Index";
-
-const RouteWithSubRoutes = route => (
-    <Route
-        path={route.path}
-        render={props => (
-            // pass the sub-routes down to keep nesting
-            <route.component {...props} routes={route.routes} />
-        )}
-    />
-);
+import About from "./class/page/About";
 
 class Router extends React.Component {
 
@@ -19,33 +13,28 @@ class Router extends React.Component {
         let routes = [
             {
                 path: '/',
-                component: Model
+                exact: true,
+                component: Index,
+                routes: []
             },
-            //{
-            //    path: '/index',
-            //    component: Index,
-                //routes: [
-                //    {
-                //        path: '/header/banner',
-                //        component: BannerContent
-                //    },
-                //    //{
-                //    //    path: 'header/no-banner',
-                //    //    component: Header
-                //    //}
-                //]
-            //}
+            {
+                path: '/index.html',
+                component: Index,
+            },
+            {
+                path: '/about.html',
+                component: About,
+            }
         ];
 
         return (
             <BrowserRouter>
-                <Switch>
-                    {routes.map((route, i) => (
-                        <RouteWithSubRoutes key={i} {...route}/>
-                    ))}
-                    {/*<Route path="/" component={Header} />*/}
-                    {/*<Route path="/header" component={Header}/>*/}
-                </Switch>
+                <div>
+                    <Header/>
+                    <HeaderBottom/>
+                    {renderRoutes(routes)}
+                    <Footer/>
+                </div>
             </BrowserRouter>
         );
     }

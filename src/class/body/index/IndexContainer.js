@@ -1,9 +1,9 @@
 import React from 'react';
-import FirstArticle from "./FirstArticle";
-import SecondArticle from "./SecondArticle";
-import OtherArticle from "./OtherArticle";
+import Container from "../../components/Container";
+import Left from "./Left";
+import Right from "../right/Right";
 
-class Left extends React.Component {
+class IndexContainer extends React.Component {
     constructor(props) {
         super(props);
 
@@ -78,22 +78,17 @@ class Left extends React.Component {
         ];
     }
 
-
     render() {
         return (
-            <div className="col-md-9 technology-left">
-                <div className="tech-no">
-                    <FirstArticle/>
-                    <div className="w3ls">
-                        {this.secondArticles.map((news, index) => <SecondArticle {...news} key={index}/>)}
-                        <div className="clearfix"/>
-                    </div>
-                    {this.otherArticles.map((article, index) => <OtherArticle {...article} key={index}/>)}
-                </div>
+            <div className="technology">
+                <Container>
+                    <Left/>
+                    <Right/>
+                </Container>
             </div>
         );
     }
 
 }
 
-export default Left;
+export default IndexContainer;

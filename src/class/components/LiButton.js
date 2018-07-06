@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class LiButton extends React.Component {
@@ -19,9 +20,9 @@ class LiButton extends React.Component {
     render() {
         return (
             <li className={this.props.liClass} onClick={this.handleClick}>
-                <a href={this.props.link} className={this.props.aClass}>
+                <Link to={this.props.link} className={this.props.aClass}>
                     {this.props.linkName}
-                </a>
+                </Link>
             </li>
         )
     }
