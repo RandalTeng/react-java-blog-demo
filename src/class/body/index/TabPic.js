@@ -75,12 +75,10 @@ class TabPic extends React.Component {
             ],
         };
 
-        console.log('new constructor.');
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(e, activeLink) {
-        console.log('click a link ' + activeLink);
         let picTitles = this.state.picTitles, tabList = this.state.tabList;
 
         picTitles.forEach((pic) => pic.liClass = pic.link === activeLink ? 'active' : '');
@@ -93,8 +91,6 @@ class TabPic extends React.Component {
     }
 
     render() {
-        console.log("TabPic render.");
-        console.dir(this.state);
         return (
             <div className="services w3l wow fadeInDown" data-wow-duration=".8s" data-wow-delay=".2s">
                 <Container>
