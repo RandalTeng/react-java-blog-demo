@@ -1,7 +1,7 @@
 import React from 'react';
 import Container from "../../components/Container";
 import Left from "./left/Left";
-import Right from "./right/Right";
+import Right from "../right/Right";
 
 class Technology extends React.Component {
     constructor(props) {

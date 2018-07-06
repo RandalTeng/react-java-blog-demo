@@ -1,7 +1,7 @@
 import React from 'react';
 import Search from "./Search";
 import PopularPost from "./PopularPost";
-import UlList from "../../../components/UlList";
+import UlList from "../../components/UlList";
 
 class Right extends React.Component {
     constructor(props) {

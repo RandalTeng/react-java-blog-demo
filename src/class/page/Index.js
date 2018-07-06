@@ -1,7 +1,7 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import HeaderBottom from "../body/index/HeaderBottom";
-import BannerContent from "../body/index/BannerContent";
+import HeaderBottom from "../header/HeaderBottom";
+import BannerContent from "../header/BannerContent";
 import TabPic from "../body/index/TabPic";
 import Technology from "../body/index/Technology";
 
