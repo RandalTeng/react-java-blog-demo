@@ -15,6 +15,7 @@ class Model extends React.Component {
                 <Header/>
                 <Switch>
                     <Route path="/" component={Index}/>
+                    <Route path="/about" component={Index}/>
                 </Switch>
                 <Footer/>
             </div>

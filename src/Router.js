@@ -21,9 +21,9 @@ class Router extends React.Component {
                 path: '/',
                 component: Model
             },
-            {
-                path: '/index',
-                component: Index,
+            //{
+            //    path: '/index',
+            //    component: Index,
                 //routes: [
                 //    {
                 //        path: '/header/banner',
@@ -34,7 +34,7 @@ class Router extends React.Component {
                 //    //    component: Header
                 //    //}
                 //]
-            }
+            //}
         ];
 
         return (
