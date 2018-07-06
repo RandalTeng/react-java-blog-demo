@@ -6,6 +6,7 @@ import HeaderBottom from "./class/header/HeaderBottom";
 import Footer from './class/footer/Footer';
 import Index from "./class/page/Index";
 import About from "./class/page/About";
+import Article from "./class/page/Article";
 
 class Router extends React.Component {
 
@@ -24,6 +25,10 @@ class Router extends React.Component {
             {
                 path: '/about.html',
                 component: About,
+            },
+            {
+                path: '/article/:artId.html',
+                component: Article,
             }
         ];
 

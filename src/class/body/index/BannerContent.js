@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import BannerBox from "../../header/BannerBox";
 import Container from "../../components/Container";
 
@@ -18,7 +19,7 @@ class BannerContent extends React.Component {
                         printer took a galley of type and
                         scrambled it to make Lorem Ipsum has been the industry's standard dummy text ever since the
                         1500s</p>
-                    <a href="/singlepage">READ MORE</a>
+                    <Link to="/article/1.html">READ MORE</Link>
                 </Container>
             </BannerBox>
         );
