@@ -1,5 +1,8 @@
 import React from 'react';
 import $ from 'jquery';
+import BannerBox from "../header/BannerBox";
+import ArticleContainer from "../body/article/ArticleContainer";
+import MenuNav from "../header/MenuNav";
 
 class Article extends React.Component {
     constructor(props) {
@@ -20,15 +23,16 @@ class Article extends React.Component {
         });
     }
 
-    dataRender = (data) => {
-        console.dir(data);
-    };
+    componentDidMount() {
+        MenuNav.cancelMenuActive();
+    }
 
 
     render() {
         return (
             <div>
-                <h1>Article Page</h1>
+                <BannerBox/>
+                <ArticleContainer/>
             </div>
         );
     }
