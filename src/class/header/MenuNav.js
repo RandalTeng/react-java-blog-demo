@@ -24,6 +24,7 @@ class MenuNav extends React.Component{
 
         // 鼠标事件
         this.handleClick = this.handleClick.bind(this);
+        MenuNav.cancelMenuActive = MenuNav.cancelMenuActive.bind(this);
     }
 
     componentDidMount() {
@@ -51,5 +52,13 @@ class MenuNav extends React.Component{
         );
     }
 }
+
+MenuNav.cancelMenuActive = function () {
+    let menuList = this.state.menuList, activeClass = this.activeClass;
+    menuList.forEach((menu) => menu.liClass = '');
+    this.setState({
+        menuList: menuList,
+    });
+};
 
 export default MenuNav;
